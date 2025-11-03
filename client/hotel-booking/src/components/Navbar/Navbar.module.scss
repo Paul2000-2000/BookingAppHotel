@@ -1,0 +1,183 @@
+.class{
+
+    padding: 25px 50px;
+
+    .content{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+
+            font-size: 45px;
+            color: var(--varbraownorange);
+
+        }
+
+        .menu{
+
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            list-style-type: none;
+
+            .priority{
+
+                padding: 7px 12px;
+                font-size: 18px;
+                color: var(--varblue);
+                cursor: pointer;
+                border: solid 1px red;
+
+            }
+
+            .item{
+
+                padding: 10px;
+                font-size: 18px;
+                color: var(--vargrey);
+                cursor: pointer;
+
+            }
+
+            .sign{
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: var(--varblue);
+                border: none;
+                font-size: 18px;
+                color: white;
+                padding: 10px 25px;
+                cursor: pointer;
+
+            }
+
+        }
+
+        .icon{
+
+            display: none;
+
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .class{
+
+        .content{
+
+            .logo{
+
+                font-size: 25px;
+
+            }
+
+            .menu{
+
+                gap: 10px;
+                font-size: 16px;
+
+            }
+
+        }
+
+    }
+
+    
+}
+
+
+@media screen and (max-width:768px){
+
+    .class{
+
+        padding: 15px;
+
+        .content{
+
+            .menu{
+
+                display: none;
+
+            }
+
+            .icon{
+
+                display: block;
+                color: black;
+                font-size: 25px;
+                font-weight: bold;
+    
+            }
+
+        }
+
+        .contentResp{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 100vw;
+            height: 100vh;
+
+            .close{
+
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                color: black;
+                font-size: 25px;
+
+
+            }
+
+
+
+            .priority{
+
+                padding: 7px 12px;
+                font-size: 18px;
+                color: var(--varblue);
+                cursor: pointer;
+                border: solid 1px red;
+
+            }
+
+            .item{
+
+                padding: 10px;
+                font-size: 18px;
+                color: var(--vargrey);
+                cursor: pointer;
+
+            }
+
+            .sign{
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: var(--varblue);
+                border: none;
+                font-size: 18px;
+                color: white;
+                padding: 10px 25px;
+                cursor: pointer;
+
+            }
+
+        }
+
+    }
+
+}
