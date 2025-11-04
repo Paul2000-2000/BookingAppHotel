@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import { CgProfile } from "react-icons/cg";
 import { IoMenu } from "react-icons/io5";
@@ -11,6 +12,14 @@ import styles from './Navbar.module.scss'
  const Navbar = () => {
 
     const [active , setActive] = useState(true);
+    const navigate = useNavigate();
+
+    const navigateLoRePage = () =>{
+        navigate(
+            '/lorepage'
+        );
+    }
+    
 
 
   return (
@@ -27,7 +36,7 @@ import styles from './Navbar.module.scss'
                     <li className={styles.item}>Hotels for sale</li>
                     <li className={styles.item}>News</li>
                     <li className={styles.item}>Contacts</li>
-                    <div className={styles.sign} >
+                    <div className={styles.sign} onClick={() => navigateLoRePage()}>
                         <p>Sign In</p>
                         <CgProfile className={styles.icon}/>
                     </div>
