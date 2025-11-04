@@ -1,6 +1,7 @@
 .class{
 
-    padding: 25px 50px;
+    padding: 15px 50px;
+    z-index: 25;
 
     .content{
 
@@ -12,6 +13,8 @@
 
             font-size: 45px;
             color: var(--varbraownorange);
+            font-family: 'Marion' , sans-serif;
+            font-weight: 500;
 
         }
 
@@ -52,6 +55,14 @@
                 color: white;
                 padding: 10px 25px;
                 cursor: pointer;
+
+                .icon{
+
+                    color: white;
+                    width: 25px;
+                    height: 25px;
+
+                }
 
             }
 
@@ -129,6 +140,7 @@
             gap: 5px;
             width: 100vw;
             height: 100vh;
+            z-index: 2;
 
             .close{
 
