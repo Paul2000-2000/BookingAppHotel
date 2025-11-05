@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useState } from 'react';
+import axios from 'axios'
 
 import styles from './LoRePage.module.scss';
 
@@ -10,6 +11,59 @@ import { FaArrowLeft } from "react-icons/fa";
  const LoRePage = () => {
 
     const [active , setActive] = useState(true);
+    const [emailRegister , setEmailRegister] = useState("");
+    const [passwordRegister , setPasswordRegister] = useState("");
+    const [nameRegister, setNameRegister] = useState("");
+
+    const handleRegisterUser = async () =>{
+
+        if (!emailRegister)
+        {
+            alert('Email can not be null');
+            return;
+        }
+
+        if (!passwordRegister)
+        {
+            alert('Password can not be null');
+            return;
+        }
+
+        if (!nameRegister)
+        {
+            alert('Name can not be null');
+            return;
+        }
+
+        const userData = {
+
+            emailRegister,
+            passwordRegister,
+            nameRegister
+
+        }
+
+        try{
+
+            const response = await axios.post("http://127.0.0.1:8000/addUser" , userData);
+            if (response.status == 200)
+                {
+                    alert('User added succesfully');
+                    setEmailRegister("");
+                    setPasswordRegister("");
+                    setNameRegister("");
+                    setActive(!active);
+                }
+
+        }catch(err){
+                alert(err);
+                console.log('Error is' , err);
+        }
+
+
+
+        
+    }
 
   return (
     <div className={styles.class}>
@@ -28,15 +82,19 @@ import { FaArrowLeft } from "react-icons/fa";
                     <input className={styles.input}
                         placeholder='Enter your e-mail'
                         type='email'
+                        value={emailRegister}
+                        onChange={(e) => setEmailRegister(e.target.value)}
                     />
                 </div>
                 <div className={styles.infoOptions}>
-                <label className={styles.label}>
+                    <label className={styles.label}>
                         Password:
                     </label>
                     <input className={styles.input}
                     placeholder='Enter your password'
                     type='password'
+                    value={passwordRegister}
+                    onChange={(e) => setPasswordRegister(e.target.value)}
                     />
                 </div>
                 <div className={styles.infoOptions}>
@@ -46,13 +104,15 @@ import { FaArrowLeft } from "react-icons/fa";
                     <input className={styles.input}
                     placeholder='Enter your name'
                     type='text'
+                    value={nameRegister}
+                    onChange={(e) => setNameRegister(e.target.value)}
                     />
                 </div>
             </div>
 
-            <buton className={styles.action}>
+            <button className={styles.action} onClick={handleRegisterUser}>
                     Register
-            </buton>
+            </button>
         </div>
 
         :
@@ -84,9 +144,9 @@ import { FaArrowLeft } from "react-icons/fa";
                
             </div>
 
-            <buton className={styles.action}>
+            <button className={styles.action}>
                     Login
-            </buton>
+            </button>
         </div>
         }
         
