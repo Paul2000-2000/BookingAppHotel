@@ -37,7 +37,12 @@ def addUser():
         "name": name
     }
 
+    if users_collection.find_one({"email": email}):
+        return jsonify({"message": "User already exists"}), 400
+
     users_collection.insert_one(new_user)
+
+    
     
     return jsonify({"message": "User added successfully"}), 200
 
