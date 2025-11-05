@@ -33,7 +33,7 @@ def addUser():
 
     new_user = {
         "email": email,
-        "password": password,  # eventual hash-uieste parola!
+        "password": password,  
         "name": name
     }
 
