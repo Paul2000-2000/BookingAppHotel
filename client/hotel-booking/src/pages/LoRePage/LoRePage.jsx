@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useState } from 'react';
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 import styles from './LoRePage.module.scss';
 
@@ -14,6 +15,13 @@ import { FaArrowLeft } from "react-icons/fa";
     const [emailRegister , setEmailRegister] = useState("");
     const [passwordRegister , setPasswordRegister] = useState("");
     const [nameRegister, setNameRegister] = useState("");
+
+    const navigate = useNavigate();
+
+    const handleNavigateAdmin = () =>
+    {
+        navigate('/admin');
+    }
 
     const handleRegisterUser = async () =>{
 
@@ -110,7 +118,7 @@ import { FaArrowLeft } from "react-icons/fa";
                 </div>
             </div>
 
-            <button className={styles.action} onClick={handleRegisterUser}>
+            <button className="action" onClick={handleRegisterUser}>
                     Register
             </button>
         </div>
@@ -144,8 +152,11 @@ import { FaArrowLeft } from "react-icons/fa";
                
             </div>
 
-            <button className={styles.action}>
-                    Login
+            <button className="action">
+                    Login Here
+            </button>
+            <button className="action" style={{marginTop:"25px"}} onClick={handleNavigateAdmin}>
+                    Admin Page
             </button>
         </div>
         }

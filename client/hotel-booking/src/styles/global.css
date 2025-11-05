@@ -6,3 +6,14 @@
 
   }
 
+  .action{
+
+    padding: 15px 35px;
+    font-size: 22px;
+    color: white;
+    background-color: var(--varblue);
+    border: solid 1px #AA6227;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
