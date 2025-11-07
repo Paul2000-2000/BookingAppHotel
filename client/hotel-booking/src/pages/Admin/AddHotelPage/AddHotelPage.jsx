@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import axios from 'axios';
+import { useNavigate } from 'react-router';
 
 import styles from './AddHotelPage.module.scss'
 
@@ -13,6 +14,7 @@ const AddHotelPage = () => {
     const [image, setImage] = useState('');
     const [lvl, setLvl] = useState('');
     const [rooms, setRooms] = useState('');
+    const navigate = useNavigate();
     
    
 
@@ -88,12 +90,13 @@ const AddHotelPage = () => {
             const response = await axios.post("http://127.0.0.1:8000/addHotel" , hotelData);
             if (response.status == 200)
                 {
-                    alert('User added succesfully');
+                    alert('Hotel added succesfully');
                     setCountry("");
                     setCity("");
                     setImage("");
                     setLvl('');
                     setRooms('');
+                    navigate('/addHotel');
                 }
 
         }catch(err){
