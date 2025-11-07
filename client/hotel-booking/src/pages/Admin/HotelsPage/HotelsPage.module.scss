@@ -1,5 +1,37 @@
 .class{
 
-    padding: 150px;
+    padding: 100px;
 
+    .content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .action{
+
+            padding: 15px 35px;
+            font-size: 22px;
+            color: white;
+            background-color: var(--varblue);
+            border: solid 1px #AA6227;
+            border-radius: 15px;
+            cursor: pointer;
+            width: 300px;
+
+        }
+
+        .list{
+
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        
+    }
+
+    
 }

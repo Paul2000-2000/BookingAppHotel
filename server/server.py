@@ -28,8 +28,8 @@ def addUser():
     password = data.get("passwordRegister")
     name = data.get("nameRegister")
 
-    db = client["hotels_and_users"] ## selectam baza de date
-    users_collection = db["users"] ## selectez colectia din baza de date
+    db = client["hotels_and_users"]
+    users_collection = db["users"]
 
     new_user = {
         "email": email,
@@ -58,8 +58,8 @@ def addHotel():
     lvl = data.get("lvl")
     rooms = data.get("rooms")
 
-    db = client["hotels_and_users"] ## selectam baza de date
-    hotels_collection = db["hotels"] ## selectez colectia din baza de date
+    db = client["hotels_and_users"] 
+    hotels_collection = db["hotels"]
 
     new_hotel = {
         "country": country,
@@ -79,7 +79,22 @@ def addHotel():
     return jsonify({"message": "Hotel added successfully"}), 200
 
 
+@app.route("/getAllHotels" , methods=["GET"])
+def getAllHotels():
+    db = client["hotels_and_users"] 
+    hotels_collection = db["hotels"]
 
+    hotels_cursor = hotels_collection.find()
+
+    print(hotels_cursor)
+    
+    hotels = []
+
+    for hotel in hotels_cursor:
+        hotel["_id"] = str(hotel["_id"]) 
+        print(hotel)
+        hotels.append(hotel)
+    return jsonify(hotels), 200
 
 
 if __name__ == "__main__":
