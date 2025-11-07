@@ -13,6 +13,8 @@ import styles from './HotelsPage.module.scss'
         navigate('/addHotel');
     }
 
+    
+
   return (
     <div className={styles.class}>
         <div className={styles.content}>
