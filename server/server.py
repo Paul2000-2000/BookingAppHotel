@@ -47,6 +47,36 @@ def addUser():
     return jsonify({"message": "User added successfully"}), 200
 
 
+@app.route("/addHotel" ,  methods=["POST"])
+def addHotel():
+ 
+    data = request.get_json()
+
+    country = data.get("country")
+    city = data.get("city")
+    image = data.get("image")
+    lvl = data.get("lvl")
+    rooms = data.get("rooms")
+
+    db = client["hotels_and_users"] ## selectam baza de date
+    hotels_collection = db["hotels"] ## selectez colectia din baza de date
+
+    new_hotel = {
+        "country": country,
+        "city": city,  
+        "image": image,
+        "lvl" : lvl,
+        "rooms" : rooms
+    }
+
+    if hotels_collection.find_one({"country": country} , {"city": city}):
+        return jsonify({"message": "Hotel already exists"}), 400
+
+    hotels_collection.insert_one(new_hotel)
+
+    
+    
+    return jsonify({"message": "Hotel added successfully"}), 200
 
 
 
