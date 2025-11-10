@@ -11,6 +11,7 @@ const AddHotelPage = () => {
 
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
+    const [name, setName] = useState('');
     const [image, setImage] = useState('');
     const [lvl, setLvl] = useState('');
     const [rooms, setRooms] = useState('');
@@ -59,6 +60,12 @@ const AddHotelPage = () => {
             return;
         }
 
+        if (!name)
+        {
+            alert('Name can not be null');
+            return;
+        }
+
         if (!image)
         {
             alert('Image can not be null');
@@ -79,11 +86,15 @@ const AddHotelPage = () => {
 
             country,
             city,
+            name,
             image,
             lvl,
             rooms
 
+
         }
+
+        console.log(hotelData);
 
         try{
 
@@ -93,6 +104,7 @@ const AddHotelPage = () => {
                     alert('Hotel added succesfully');
                     setCountry("");
                     setCity("");
+                    setName("");
                     setImage("");
                     setLvl('');
                     setRooms('');
@@ -137,6 +149,17 @@ const AddHotelPage = () => {
                     type='text'
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
+                    />
+                </div>
+                <div className={styles.infoOptions}>
+                    <label className={styles.label}>
+                        Name:
+                    </label>
+                    <input className={styles.input}
+                    placeholder='Enter Name'
+                    type='text'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     />
                 </div>
                 <div className={styles.infoOptions}>

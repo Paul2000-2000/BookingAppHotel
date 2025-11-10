@@ -1,6 +1,7 @@
 from flask import Flask, jsonify , request
 from flask_cors import CORS
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 from dotenv import load_dotenv
 import os
 
@@ -54,6 +55,7 @@ def addHotel():
 
     country = data.get("country")
     city = data.get("city")
+    name = data.get("name")
     image = data.get("image")
     lvl = data.get("lvl")
     rooms = data.get("rooms")
@@ -64,13 +66,13 @@ def addHotel():
     new_hotel = {
         "country": country,
         "city": city,  
+        "name": name,
         "image": image,
         "lvl" : lvl,
         "rooms" : rooms
     }
 
-    if hotels_collection.find_one({"country": country} , {"city": city}):
-        return jsonify({"message": "Hotel already exists"}), 400
+   
 
     hotels_collection.insert_one(new_hotel)
 
@@ -95,6 +97,15 @@ def getAllHotels():
         print(hotel)
         hotels.append(hotel)
     return jsonify(hotels), 200
+
+@app.route("/deletehotel/<id>" , methods=["DELETE"])
+def deleteHotel(id):
+    db = client["hotels_and_users"]
+    hotels_collection = db["hotels"]
+    result = hotels_collection.delete_one({"_id": ObjectId(id)})
+    if result.deleted_count == 1:
+        return jsonify({"message": "Deleted successfully"}), 200
+    return jsonify({"message": "Hotel not found"}), 404
 
 
 if __name__ == "__main__":
