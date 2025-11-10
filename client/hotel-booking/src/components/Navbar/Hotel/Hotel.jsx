@@ -13,8 +13,8 @@ const Hotel = ( { id , image , country , city , name , lvl , rooms , key , onDel
     onDelete(id)
   }
 
-  const handleEdit = (id) =>{
-    navigate(`/edithotel/${id}`);
+  const handleEdit = () =>{
+    navigate(`/editHotel/${id}`);
   }
 
 

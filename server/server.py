@@ -98,6 +98,55 @@ def getAllHotels():
         hotels.append(hotel)
     return jsonify(hotels), 200
 
+@app.route("/getHotel/<id>", methods=["GET"])
+def getHotel(id):
+    db = client["hotels_and_users"]
+    hotels_collection = db["hotels"]
+    
+    try:
+        result = hotels_collection.find_one({"_id": ObjectId(id)})
+    except Exception as e:
+        return jsonify({"error": "Invalid ID format"}), 400
+
+    if result:
+        
+        result["_id"] = str(result["_id"])
+        return jsonify(result), 200
+    
+    return jsonify({"message": "Hotel not found"}), 404
+
+
+@app.route("/editHotel/<id>", methods=["PUT"])
+def edit_hotel(id):
+    db = client["hotels_and_users"]
+    hotels_collection = db["hotels"]
+
+    
+    data = request.get_json()
+
+    
+    update_fields = {}
+    for field in ["country", "city", "name", "image", "lvl", "rooms"]:
+        if field in data and data[field] is not None:
+            update_fields[field] = data[field]
+
+    if not update_fields:
+        return jsonify({"error": "No fields to update"}), 400
+
+    
+    result = hotels_collection.update_one(
+        {"_id": ObjectId(id)},
+        {"$set": update_fields}
+    )
+
+    if result.matched_count == 0:
+        return jsonify({"error": "Hotel not found"}), 404
+
+  
+    updated_hotel = hotels_collection.find_one({"_id": ObjectId(id)})
+    updated_hotel["_id"] = str(updated_hotel["_id"])
+    return jsonify(updated_hotel), 200
+
 @app.route("/deletehotel/<id>" , methods=["DELETE"])
 def deleteHotel(id):
     db = client["hotels_and_users"]
