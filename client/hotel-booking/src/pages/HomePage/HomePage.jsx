@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../views/Hero/Hero';
 import NewHotels from '../../views/NewHotels/NewHotels';
 import News from '../../views/News/News';
+import Services from '../../views/Services/Services';
 
  const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ import News from '../../views/News/News';
       <Hero/>
       <NewHotels/>
       <News/>
+      <Services/>
     </div>
   )
 }
