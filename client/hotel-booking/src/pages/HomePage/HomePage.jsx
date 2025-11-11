@@ -5,6 +5,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../views/Hero/Hero';
 import NewHotels from '../../views/NewHotels/NewHotels';
+import News from '../../views/News/News';
 
  const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ import NewHotels from '../../views/NewHotels/NewHotels';
       <Navbar/>
       <Hero/>
       <NewHotels/>
+      <News/>
     </div>
   )
 }
