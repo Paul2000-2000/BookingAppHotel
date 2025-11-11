@@ -1,0 +1,50 @@
+.class{
+
+    
+    padding: 45px 50px;
+
+    .content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        .title{
+
+            font-size: 42px;
+            font-weight: bold;
+            padding: 0px 15px;
+            border-left: solid 2px black;
+
+        }
+
+        .listContent{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .iconDirect{
+
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+
+            }
+
+            .list{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+                flex-wrap: wrap;
+              
+
+            }
+
+        }
+
+    }
+
+}
