@@ -1,0 +1,63 @@
+.class{
+
+    padding: 45px 50px;
+
+    .content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+    .title{
+
+        font-size: 42px;
+        font-weight: bold;
+        padding: 0px 15px;
+        border-left: solid 2px black;
+
+    }
+
+    .list{
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25px;
+
+        .item{
+
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            border: solid 1px black;
+            width: 320px;
+            
+
+            .icon{
+
+                width: 95px;
+                height: 95px;
+
+            }
+
+            .headline{
+
+                font-size: 16px;
+                font-weight: bold;
+
+            }
+
+            .description{
+
+                font-size: 14px;
+                color: grey;
+
+            }
+
+        }
+
+    }
+
+
+} }
