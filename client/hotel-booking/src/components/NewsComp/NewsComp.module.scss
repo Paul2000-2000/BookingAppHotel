@@ -1,0 +1,44 @@
+.item{
+
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .info{
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+        .edit{
+
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+
+        .headline{
+
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .description{
+
+            font-size: 14px;
+            color: grey;
+
+        }
+
+        .date{
+
+            font-size: 12px;
+            color: grey;
+
+        }
+        
+    }
+
+}
