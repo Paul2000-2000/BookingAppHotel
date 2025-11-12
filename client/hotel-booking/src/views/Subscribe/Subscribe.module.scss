@@ -1,0 +1,94 @@
+.class{
+
+    padding: 45px 50px;
+    
+
+    .content{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        background-color: #ddcfcf;
+        padding: 50px;
+        border-radius: 15px;
+
+        .sponsors{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+
+            .image{
+
+                object-fit: cover;
+                width: 200px;
+                height: 65px;
+                cursor: pointer;
+
+            }
+
+        }
+
+        .text{
+
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 45%;
+            align-items: center;
+            text-align: center;
+
+            .title{
+
+                font-weight: bold;
+                font-size: 52px;
+
+            }
+
+            .description{
+
+                font-size: 22px;
+
+            }
+
+            .send{
+
+                border: solid 1px grey;
+                border-radius: 15px;
+                
+                width: 450px;
+                display: flex;
+
+                .input{
+
+                    border-radius: 15px 0px 0px 15px;
+                    border: none;
+                    font-size: 16px;
+                    width: 300px;
+                    padding: 15px;
+
+                }
+
+                .action{
+
+                    border-radius: 0 15px 15px 0;
+                    background-color: black;
+                    border: none;
+                    color: white;
+                    font-size: 16px;
+                    cursor: pointer;
+                    width: 150px;
+                    padding: 15px;
+
+                }
+
+            }
+
+        }
+        
+    }
+
+}
