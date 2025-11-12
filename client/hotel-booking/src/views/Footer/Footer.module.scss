@@ -1,0 +1,108 @@
+.class{
+
+    padding: 45px 50px;
+    background-color: #231f20;
+
+    .contentOne{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: solid 1px grey;
+
+        .title{
+
+            font-size: 55px;
+            color: white;
+            width: 40%;
+            
+
+        }
+
+        .action{
+
+            background-color: white;
+            padding: 15px 50px;
+            color: black;
+            font-size: 16px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+
+
+        }
+
+    }
+
+    .contentTwo{
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 35px;
+
+        .info{
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .title{
+
+                text-decoration: underline;
+                font-size: 18px;
+                font-weight: 400;
+                color: white;
+
+            }
+
+            .element{
+
+                font-size: 15px;
+                color: white;
+                span{
+
+                    color: grey;
+
+                }
+
+            }
+
+        }
+
+        .message{
+
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 285px;
+            border: solid 1px white;
+            border-radius: 15px;
+
+            .description{
+
+                font-size: 15px;
+                color: white;
+
+            }
+
+            .more{
+
+                cursor: pointer;
+                border: none;
+                color: grey;
+                font-size: 14px;
+                width: 100px;
+                background-color: transparent;
+                align-self: flex-end;
+                
+            }
+
+        }
+
+    }
+
+}
