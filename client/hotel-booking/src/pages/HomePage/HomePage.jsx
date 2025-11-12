@@ -8,6 +8,7 @@ import NewHotels from '../../views/NewHotels/NewHotels';
 import News from '../../views/News/News';
 import Services from '../../views/Services/Services';
 import Subscribe from '../../views/Subscribe/Subscribe';
+import Footer from '../../views/Footer/Footer';
 
  const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ import Subscribe from '../../views/Subscribe/Subscribe';
       <News/>
       <Services/>
       <Subscribe/>
+      <Footer/>
     </div>
   )
 }
