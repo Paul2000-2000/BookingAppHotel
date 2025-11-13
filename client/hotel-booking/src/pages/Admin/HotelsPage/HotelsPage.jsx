@@ -17,6 +17,18 @@ import Hotel from '../../../components/Hotel/Hotel'
         navigate('/addHotel');
     }
 
+    const onDelete = async (id) =>{
+      try {
+        await axios.delete(`http://127.0.0.1:8000/deletehotel/${id}`);
+        alert("Hotel deleted successfully!");
+        
+        setHotels(hotels.filter(h => h._id !== id));
+      } catch (err) {
+        console.error(err);
+        alert("Error deleting hotel");
+      }
+    }
+
     useEffect(() => {
         const fetchHotels = async () =>{
 
@@ -55,12 +67,15 @@ import Hotel from '../../../components/Hotel/Hotel'
             <div className={styles.list}>
               {
                 hotels.map( (hotel) =>(
-                    <Hotel image={hotel.image} 
+                    <Hotel id={hotel._id}
+                           image={hotel.image} 
                            country={hotel.country}
+                           name={hotel.name}
                            city={hotel.city}
                            lvl={hotel.lvl}
                            rooms={hotel.rooms}
                            key={hotel.id}
+                           onDelete={onDelete}
                      />
                 ) )
               }
