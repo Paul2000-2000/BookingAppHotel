@@ -55,7 +55,15 @@ def addHotel():
 
     country = data.get("country")
     city = data.get("city")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     name = data.get("name")
+    description = data.get("description")
+>>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+    name = data.get("name")
+>>>>>>> origin/main
     image = data.get("image")
     lvl = data.get("lvl")
     rooms = data.get("rooms")
@@ -66,7 +74,15 @@ def addHotel():
     new_hotel = {
         "country": country,
         "city": city,  
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         "name": name,
+        "description" : description,
+>>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+        "name": name,
+>>>>>>> origin/main
         "image": image,
         "lvl" : lvl,
         "rooms" : rooms

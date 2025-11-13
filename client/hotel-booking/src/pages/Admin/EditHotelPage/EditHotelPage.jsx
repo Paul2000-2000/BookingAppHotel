@@ -16,6 +16,10 @@ const EditHotelPage = () => {
     const [editCountry, setEditCountry] = useState('');
     const [editCity, setEditCity] = useState('');
     const [editName, setEditName] = useState('');
+<<<<<<< HEAD
+    const [editDescription , setEditDescription] = useState('');
+=======
+>>>>>>> origin/main
     const [editImage, setEditImage] = useState('');
     const [editLvl, setEditLvl] = useState('');
     const [editRooms, setEditRooms] = useState('');
@@ -74,6 +78,10 @@ const EditHotelPage = () => {
         const country = editCountry || hotel?.country;
         const city = editCity || hotel?.city;
         const name = editName || hotel?.name;
+<<<<<<< HEAD
+        const description = editDescription || hotel?.description;
+=======
+>>>>>>> origin/main
         const image = editImage || hotel?.image;
         const lvl = editLvl || hotel?.lvl;
         const rooms = editRooms || hotel?.rooms;
@@ -85,6 +93,10 @@ const EditHotelPage = () => {
             country,
             city,
             name,
+<<<<<<< HEAD
+            description,
+=======
+>>>>>>> origin/main
             image,
             lvl,
             rooms
@@ -103,6 +115,10 @@ const EditHotelPage = () => {
                     setEditCountry("");
                     setEditCity("");
                     setEditName("");
+<<<<<<< HEAD
+                    setEditDescription("");
+=======
+>>>>>>> origin/main
                     setEditImage("");
                     setEditLvl('');
                     setEditRooms('');
@@ -148,6 +164,15 @@ const EditHotelPage = () => {
                 </div>
                 <div className={styles.infoOptions}>
                     <label className={styles.label}>
+<<<<<<< HEAD
+                        Description:
+                    </label>
+                    <p>{hotel?.description}</p>
+                </div>
+                <div className={styles.infoOptions}>
+                    <label className={styles.label}>
+=======
+>>>>>>> origin/main
                         Image:
                     </label>
                     <img src={hotel?.image} style={{width:"200px" , height:"200px"}}/>
@@ -202,6 +227,20 @@ const EditHotelPage = () => {
                 </div>
                 <div className={styles.infoOptions}>
                     <label className={styles.label}>
+<<<<<<< HEAD
+                        Description:
+                    </label>
+                    <textarea className={styles.inputT}
+                    placeholder='Enter Description'
+                    type='text'
+                    value={editDescription}
+                    onChange={(e) => setEditDescription(e.target.value)}
+                    />
+                </div>
+                <div className={styles.infoOptions}>
+                    <label className={styles.label}>
+=======
+>>>>>>> origin/main
                         Image:
                     </label>
                     <input type="file" accept="image/*" 
