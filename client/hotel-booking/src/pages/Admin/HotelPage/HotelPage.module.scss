@@ -1,0 +1,47 @@
+.class{
+
+    padding: 15px 50px;
+
+    .content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+
+
+        .hotel{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .image{
+
+                object-fit: cover;
+                width: 355px;
+                cursor: pointer;
+
+            }
+
+            .hotelInfo{
+
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+            }
+
+        }
+
+        .roomsAndLvl{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+
+        }
+
+    }
+
+}

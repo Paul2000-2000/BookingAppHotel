@@ -11,6 +11,11 @@ const AddHotelPage = () => {
 
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
+<<<<<<< HEAD
+=======
+    const [description , setDescription] = useState('');
+    const [name, setName] = useState('');
+>>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
     const [image, setImage] = useState('');
     const [lvl, setLvl] = useState('');
     const [rooms, setRooms] = useState('');
@@ -59,6 +64,21 @@ const AddHotelPage = () => {
             return;
         }
 
+<<<<<<< HEAD
+=======
+        if (!name)
+        {
+            alert('Name can not be null');
+            return;
+        }
+
+        if (!description)
+            {
+                alert('Description can not be null');
+                return;
+            }
+
+>>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
         if (!image)
         {
             alert('Image can not be null');
@@ -79,6 +99,11 @@ const AddHotelPage = () => {
 
             country,
             city,
+<<<<<<< HEAD
+=======
+            name,
+            description,
+>>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
             image,
             lvl,
             rooms
@@ -94,6 +119,7 @@ const AddHotelPage = () => {
                     setCountry("");
                     setCity("");
                     setImage("");
+                    setDescription("");
                     setLvl('');
                     setRooms('');
                     navigate('/addHotel');
@@ -141,6 +167,31 @@ const AddHotelPage = () => {
                 </div>
                 <div className={styles.infoOptions}>
                     <label className={styles.label}>
+<<<<<<< HEAD
+=======
+                        Description:
+                    </label>
+                    <textarea className={styles.inputT}
+                    placeholder='Enter description'
+                    type='text'
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    />
+                </div>
+                <div className={styles.infoOptions}>
+                    <label className={styles.label}>
+                        Name:
+                    </label>
+                    <input className={styles.input}
+                    placeholder='Enter Name'
+                    type='text'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    />
+                </div>
+                <div className={styles.infoOptions}>
+                    <label className={styles.label}>
+>>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
                         Image:
                     </label>
                     <input type="file" accept="image/*" 

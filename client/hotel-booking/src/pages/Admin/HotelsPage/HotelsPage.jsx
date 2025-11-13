@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router'
 
 import styles from './HotelsPage.module.scss'
 
-import Hotel from '../../../components/Navbar/Hotel/Hotel'
+import Hotel from '../../../components/Hotel/Hotel'
 
  const HotelsPage = () => {
 
