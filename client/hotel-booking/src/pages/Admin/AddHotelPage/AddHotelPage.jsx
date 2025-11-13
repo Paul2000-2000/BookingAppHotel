@@ -12,10 +12,14 @@ const AddHotelPage = () => {
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const [description , setDescription] = useState('');
     const [name, setName] = useState('');
 >>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+    const [name, setName] = useState('');
+>>>>>>> origin/main
     const [image, setImage] = useState('');
     const [lvl, setLvl] = useState('');
     const [rooms, setRooms] = useState('');
@@ -65,13 +69,17 @@ const AddHotelPage = () => {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         if (!name)
         {
             alert('Name can not be null');
             return;
         }
 
+<<<<<<< HEAD
         if (!description)
             {
                 alert('Description can not be null');
@@ -79,6 +87,8 @@ const AddHotelPage = () => {
             }
 
 >>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+>>>>>>> origin/main
         if (!image)
         {
             alert('Image can not be null');
@@ -100,15 +110,22 @@ const AddHotelPage = () => {
             country,
             city,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             name,
             description,
 >>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+            name,
+>>>>>>> origin/main
             image,
             lvl,
             rooms
 
+
         }
+
+        console.log(hotelData);
 
         try{
 
@@ -118,6 +135,7 @@ const AddHotelPage = () => {
                     alert('Hotel added succesfully');
                     setCountry("");
                     setCity("");
+                    setName("");
                     setImage("");
                     setDescription("");
                     setLvl('');
@@ -168,6 +186,7 @@ const AddHotelPage = () => {
                 <div className={styles.infoOptions}>
                     <label className={styles.label}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                         Description:
                     </label>
@@ -180,6 +199,8 @@ const AddHotelPage = () => {
                 </div>
                 <div className={styles.infoOptions}>
                     <label className={styles.label}>
+=======
+>>>>>>> origin/main
                         Name:
                     </label>
                     <input className={styles.input}
@@ -191,7 +212,10 @@ const AddHotelPage = () => {
                 </div>
                 <div className={styles.infoOptions}>
                     <label className={styles.label}>
+<<<<<<< HEAD
 >>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+>>>>>>> origin/main
                         Image:
                     </label>
                     <input type="file" accept="image/*" 

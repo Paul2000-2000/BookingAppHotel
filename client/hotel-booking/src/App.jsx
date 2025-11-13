@@ -4,10 +4,14 @@ import AdminPage from "./pages/Admin/AdminPage/AdminPage"
 import HotelsPage from "./pages/Admin/HotelsPage/HotelsPage"
 import AddHotelPage from "./pages/Admin/AddHotelPage/AddHotelPage"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import EditHotelPage from "./pages/Admin/EditHotelPage/EditHotelPage"
 import HotelPage from "./pages/Admin/HotelPage/HotelPage"
 >>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+import EditHotelPage from "./pages/Admin/EditHotelPage/EditHotelPage"
+>>>>>>> origin/main
 
 import {BrowserRouter , Route, Routes} from 'react-router-dom'
 
@@ -25,10 +29,14 @@ function App() {
         <Route path="/hotels" element={<HotelsPage/>}/>
         <Route path="/addHotel" element={<AddHotelPage/>}/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <Route path="/editHotel/:id" element={<EditHotelPage/>}/>
         <Route path="/hotels/hotel/:id" element={<HotelPage/>}/>
 >>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
+=======
+        <Route path="/editHotel/:id" element={<EditHotelPage/>}/>
+>>>>>>> origin/main
 
       </Routes>
     </BrowserRouter>

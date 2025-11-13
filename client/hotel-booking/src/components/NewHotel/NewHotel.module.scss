@@ -1,0 +1,82 @@
+.item{
+
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 1px grey;
+    border-radius: 15px;
+    
+
+    .show{
+
+        padding: 2px;
+        width: 240px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-image: url("../../assets/NewHotelimg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-self: center;
+
+        .save{
+
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+
+        }
+
+        .price{
+
+            font-weight: bold;
+            background-color: white;
+            border: solid 1px grey;
+            border-radius: 5px;
+            padding: 10px;
+
+        }
+
+    }
+
+    .info{
+
+        display: flex;
+        
+        align-items: center;
+        gap: 35px;
+
+        .infoInfo{
+
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            .country, .rooms{
+
+                font-size: 16px;
+                color: #d0d0d0;
+
+            }
+            
+        }
+
+    }
+
+    .more{
+
+        border: solid 1px black;
+        border-radius: 5px;
+        padding: 10px 35px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: white;
+        cursor: pointer;
+
+    }
+
+}
