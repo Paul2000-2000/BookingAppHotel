@@ -55,15 +55,11 @@ def addHotel():
 
     country = data.get("country")
     city = data.get("city")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     name = data.get("name")
     description = data.get("description")
->>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
-=======
-    name = data.get("name")
->>>>>>> origin/main
+
+
     image = data.get("image")
     lvl = data.get("lvl")
     rooms = data.get("rooms")
@@ -74,15 +70,8 @@ def addHotel():
     new_hotel = {
         "country": country,
         "city": city,  
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "name": name,
         "description" : description,
->>>>>>> 8b93908 (hotelPage almost done , need resposnvei)
-=======
-        "name": name,
->>>>>>> origin/main
         "image": image,
         "lvl" : lvl,
         "rooms" : rooms
@@ -140,9 +129,11 @@ def edit_hotel(id):
     
     data = request.get_json()
 
+
+
     
     update_fields = {}
-    for field in ["country", "city", "name", "image", "lvl", "rooms"]:
+    for field in ["country", "city", "name","description","image", "lvl", "rooms"]:
         if field in data and data[field] is not None:
             update_fields[field] = data[field]
 

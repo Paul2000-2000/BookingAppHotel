@@ -71,6 +71,7 @@ import Hotel from '../../../components/Hotel/Hotel'
                            image={hotel.image} 
                            country={hotel.country}
                            name={hotel.name}
+                           description={hotel.description}
                            city={hotel.city}
                            lvl={hotel.lvl}
                            rooms={hotel.rooms}
