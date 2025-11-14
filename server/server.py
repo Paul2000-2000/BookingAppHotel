@@ -164,5 +164,39 @@ def deleteHotel(id):
     return jsonify({"message": "Hotel not found"}), 404
 
 
+
+
+@app.route("/addRoom/<id>" ,  methods=["POST"])
+def addRoom(id):
+ 
+    data = request.get_json()
+
+    
+    description = data.get("description")
+    image = data.get("image")
+    price = data.get("price")
+    beds = data.get("beds")
+
+    db = client["hotels_and_users"] 
+    rooms_collection = db["rooms"]
+
+    new_room = {
+        
+        "price": price,
+        "description" : description,
+        "image": image,
+        "beds" : beds,
+        "id_hotel": ObjectId(id)
+    }
+
+   
+
+    rooms_collection.insert_one(new_room)
+
+    
+    
+    return jsonify({"message": "Room added successfully"}), 200
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000, debug=True)

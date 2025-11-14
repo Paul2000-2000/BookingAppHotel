@@ -3,12 +3,9 @@ import LoRePage from "./pages/LoRePage/LoRePage"
 import AdminPage from "./pages/Admin/AdminPage/AdminPage"
 import HotelsPage from "./pages/Admin/HotelsPage/HotelsPage"
 import AddHotelPage from "./pages/Admin/AddHotelPage/AddHotelPage"
-
-
+import AddRoomPage from "./pages/Admin/AddRoomPage/AddRoomPage"
 import HotelPage from "./pages/Admin/HotelPage/HotelPage"
-
 import EditHotelPage from "./pages/Admin/EditHotelPage/EditHotelPage"
-
 import {BrowserRouter , Route, Routes} from 'react-router-dom'
 
 function App() {
@@ -30,6 +27,8 @@ function App() {
         <Route path="/hotels/hotel/:id" element={<HotelPage/>}/>
 
         <Route path="/editHotel/:id" element={<EditHotelPage/>}/>
+
+        <Route path="/addRoom/:id" element={<AddRoomPage/>}/>
 
 
       </Routes>
